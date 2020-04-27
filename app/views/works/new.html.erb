@@ -1,0 +1,47 @@
+<!--<h1>新しい仕事を教えてくれ</h1-->
+<h2>新しい仕事を教えて</h2>
+
+
+<%= form_with(model: @work, local: true) do |f| %>
+
+  
+<%= f.label :content, 'メッセージ' %>
+
+  
+<%= f.text_field :content %>
+
+
+  
+<%= f.submit '投稿' %>
+
+
+<% end %>
+
+
+
+
+<!--<%= link_to '一覧に戻る', works_path %>-->
+
+<!--<h1>新しい仕事をしたい</h1>-->
+<!--<%= form_with(model:@work, local:true) do |f| %>-->
+<!--<%= f.label:content,'me'%>-->
+<!--<%= f.text_field:content%>-->
+<!--<%= f.submit 'tou'%>-->
+<!--<% end %>-->
+<!--<% link_to 'iti',works_path %>-->
+
+
+
+
+  
+
+  
+
+
+  
+
+
+
+
+
+

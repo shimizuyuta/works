@@ -1,0 +1,14 @@
+
+<% if logged_in? %>
+<p>今ログインしているのは:<%= current_user.name %></p>
+
+
+<% else %>
+
+  <div class='center jumbotron'>
+    <div class='text-center'>
+        <h1>ようこそワールドへ</h1>
+        <%= link_to '登録', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+</div>
+<% end %>

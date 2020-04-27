@@ -1,0 +1,26 @@
+<% if logged_in? %>
+        <p>今ログインしているのは:<%= current_user.name%></p>
+        <h1>一覧</h1>
+        <ul>
+            <% @works.each do |work|%>
+            <li>
+                <%= link_to work.id, work %>
+                <%= work.content%>
+            </li>
+        </ul>
+        <% end %>
+        <%= link_to '投稿する', new_work_path %>
+        <%= link_to '一覧に戻ろう', works_path %>
+        
+<% else%>
+        <div class='center jumbotron'>
+            <div class='text-center'>
+                <h1>ようこそワールドへ</h1>
+                <%= link_to 'に登録', signup_path, class: 'btn btn-lg btn-primary'%>
+            </div>
+        </div>
+
+<% end %>
+
+
+
